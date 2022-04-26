@@ -7,7 +7,7 @@ from keras.layers import Dense, Dropout, Flatten, Merge
 from keras.layers import Conv1D, MaxPooling1D, AveragePooling1D
 
 num_classes = 5
-u = np.load('/dataset/final.split.up.seln.big.npz', encoding = 'latin1')
+u = np.load('final.split.up.seln.small.npz', encoding = 'latin1', allow_pickle=True)
 
 xtest, ytest,postest = [u[i][:2000] for i in 'xtest ytest postest'.split()]
 ytest = keras.utils.to_categorical(ytest, num_classes)

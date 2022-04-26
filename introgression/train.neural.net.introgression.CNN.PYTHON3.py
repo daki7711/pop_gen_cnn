@@ -11,7 +11,7 @@ batch_size = 256
 epochs = 19
 num_classes = 3
 
-u = np.load("/dataset/big_sim.npz")
+u = np.load("big_sim.npz")
 xtrain, xtest, ytrain, ytest = [u[i] for i in ['xtrain', 'xtest', 'ytrain', 'ytest']]
 
 ytest = keras.utils.to_categorical(ytest, num_classes)
